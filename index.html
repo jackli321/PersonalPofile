@@ -10,16 +10,13 @@
   body {
     font-family: "Lato", sans-serif;
   }
-
   .mySlides {
     display: none;
   }
-
   .timebody {
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
   }
-
   .back-img {
     background-image: url("backImg.jpg");
     background-position: center;
@@ -28,7 +25,6 @@
     position: relative;
     height: auto;
   }
-
   .back-img2 {
     background-image: url("backImg2.jpg");
     background-position: center;
@@ -37,14 +33,12 @@
     position: relative;
     height: auto;
   }
-
   /* The actual timeline (the vertical ruler) */
   .timeline {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
   }
-
   /* The actual timeline (the vertical ruler) */
   .timeline::after {
     content: '';
@@ -56,7 +50,6 @@
     left: 50%;
     margin-left: -3px;
   }
-
   /* Container around content */
   .container {
     padding: 10px 40px;
@@ -64,7 +57,6 @@
     background-color: inherit;
     width: 50%;
   }
-
   /* The circles on the timeline */
   .container::after {
     content: '';
@@ -76,19 +68,16 @@
     border: 4px solid lightgray;
     top: 15px;
     border-radius: 50%;
-    z-index: 1;
+    z-index: 0;
   }
-
   /* Place the container to the left */
   .left {
     left: 0;
   }
-
   /* Place the container to the right */
   .right {
     left: 50%;
   }
-
   /* Add arrows to the left container (pointing right) */
   .left::before {
     content: " ";
@@ -96,13 +85,12 @@
     position: absolute;
     top: 22px;
     width: 0;
-    z-index: 1;
+    z-index: 0;
     right: 30px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
   }
-
   /* Add arrows to the right container (pointing left) */
   .right::before {
     content: " ";
@@ -110,18 +98,16 @@
     position: absolute;
     top: 22px;
     width: 0;
-    z-index: 1;
+    z-index: 0;
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
-
   /* Fix the circle for containers on the right side */
   .right::after {
     left: -13px;
   }
-
   /* The actual content */
   .content {
     padding: 20px 30px;
@@ -129,15 +115,12 @@
     position: relative;
     border-radius: 6px;
   }
-
   /* Media queries - Responsive timeline on screens less than 600px wide */
   @media screen and (max-width: 600px) {
-
     /* Place the timelime to the left */
     .timeline::after {
       left: 31px;
     }
-
     /* Full-width containers */
     .container {
       width: 100%;
@@ -145,7 +128,6 @@
       padding-left: 70px;
       padding-right: 25px;
     }
-
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
       left: 60px;
@@ -153,13 +135,11 @@
       border-width: 10px 10px 10px 0;
       border-color: transparent white transparent transparent;
     }
-
     /* Make sure all circles are at the same spot */
     .left::after,
     .right::after {
       left: 15px;
     }
-
     /* Make all right containers behave like the left ones */
     .right {
       left: 0%;
@@ -171,7 +151,7 @@
 
   <!-- Navbar -->
   <div class="w3-top">
-    <div class="w3-bar w3-black w3-card">
+    <div class="w3-bar w3-black w3-card" style="z-index: 2;">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
         onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
@@ -326,7 +306,6 @@
     // Automatic Slideshow - change image every 4 seconds
     var myIndex = 0;
     carousel();
-
     function carousel() {
       var i;
       var x = document.getElementsByClassName("mySlides");
@@ -338,7 +317,6 @@
       x[myIndex - 1].style.display = "block";
       setTimeout(carousel, 4000);
     }
-
     // Used to toggle the menu on small screens when clicking on the menu button
     function myFunction() {
       var x = document.getElementById("navDemo");
@@ -348,7 +326,6 @@
         x.className = x.className.replace(" w3-show", "");
       }
     }
-
     // When the user clicks anywhere outside of the modal, close it
     var modal = document.getElementById('ticketModal');
     window.onclick = function (event) {
