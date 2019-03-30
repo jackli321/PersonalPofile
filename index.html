@@ -29,6 +29,15 @@
     height: auto;
   }
 
+  .back-img2 {
+    background-image: url("backImg2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: auto;
+  }
+
   /* The actual timeline (the vertical ruler) */
   .timeline {
     position: relative;
@@ -121,12 +130,6 @@
     border-radius: 6px;
   }
 
-  .back-img {
-    width: 100%;
-    position: relative;
-    z-index: -1;
-  }
-
   /* Media queries - Responsive timeline on screens less than 600px wide */
   @media screen and (max-width: 600px) {
 
@@ -175,8 +178,8 @@
       <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
       <a href="#video" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEO</a>
       <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-      </div>
     </div>
+  </div>
   </div>
 
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
@@ -218,7 +221,7 @@
           <img src="IMG_0082.jpg" class="w3-round w3-margin-bottom" alt="Image 1" style="width:60%">
         </div>
         <div class="w3-third">
-          <img src="Home1.jpg" class="w3-round w3-margin-bottom" alt="Image 2" style="width:90%">
+          <img src="Home1.jpg" class="w3-round w3-margin-bottom" alt="Image 2" style="width:100%">
         </div>
         <div class="w3-third">
           <img src="img2.jpg" class="w3-round w3-margin-bottom" alt="Image 3" style="width:60%">
@@ -280,8 +283,8 @@
       </div>
     </div>
 
-    <!-- The Tour Section -->
-    <div class="w3-black" id="video">
+    <!-- The Video Section -->
+    <div class="back-img2" id="video">
       <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
         <iframe width="700" height="500" src="https://www.youtube.com/embed/AL9xAar74NM"></iframe>
       </div>
@@ -293,7 +296,6 @@
       <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
         <iframe width="700" height="500" src="https://www.youtube.com/embed/gOZV715_F5Y"></iframe>
       </div>
-
     </div>
 
     <!-- The Contact Section -->
@@ -314,8 +316,10 @@
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-    <a href="https://www.facebook.com/jack.li.5494" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="https://www.instagram.com/jackkkkkkkkli/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.facebook.com/jack.li.5494" target="_blank"><i
+        class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/jackkkkkkkkli/" target="_blank"><i
+        class="fa fa-instagram w3-hover-opacity"></i></a>
   </footer>
 
   <script>
